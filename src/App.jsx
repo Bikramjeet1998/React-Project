@@ -1,37 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Alert from "./components/Alert/Alert";
+import Test from "./Components/Test/Test";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        Alert Massage Is
+        <Alert />
       </div>
-      <h1>Vite + React</h1>
-      <h3>I'm Bikramjeet Singh And This is my first React project</h3>
-      <h3>first commit on Bikramjeet Branch</h3>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        This is Text File
+        <Test />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h3>
+        I'm Bikramjeet Singh And This is my first React project where i have
+        Import Two componenets Alert Amd Test
+      </h3>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
