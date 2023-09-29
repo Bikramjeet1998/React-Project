@@ -14,16 +14,17 @@ function App() {
     name: "Jaskaran",
   };
 
-  function testFunction() {
+  function testFunction(event) {
     console.log("This function is inside App.js Component");
+    console.log(event.target.value)
   }
 
   return (
     <>
       <div>
         <Alert
-          message="This is from prop message"
-          dataArray={testArray}
+          message={"This is from prop message"}
+          dataArray={[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]}
           dataObject={testObj}
           testFun={testFunction}
         >

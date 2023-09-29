@@ -1,14 +1,14 @@
 import React from "react";
 import "./Alert.css";
 
-export default function Alert(props) {
-  console.log(props);
+export default function Alert({ dataArray, dataObject, message = "Default Message", testFun, children }) {
+  // console.log(props);
 
   // let dataArray = props.dataArray;
   // let message = props.message;
   // console.log(dataArray);
 
-  let { dataArray, dataObject, message, testFun } = props;
+  // let { dataArray, dataObject, message, testFun } = props;
   // console.log(dataArray, dataObject, message, testFun);
 
   // testFun();
@@ -18,7 +18,9 @@ export default function Alert(props) {
   return (
     <div className="alert">
       <h1>{message}</h1>
-      {props.children}
+      <input onChange={(event) => testFun(event)}/>
+      <button onClick={() => alert("btn clicked!")}>Click Me</button>
+      {children}
     </div>
   );
 }
