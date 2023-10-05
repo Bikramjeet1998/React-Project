@@ -4,7 +4,7 @@ import "./App.css";
 // import Alert from "./components/Alert/Alert";
 // import Test, { H1, H2 } from "./Test";
 // import Mywork from "./practice/Mywork/Mywork";
-import Product from "./Product/Product";
+import Mytask from "./Mytask/Mytask";
 
 function App() {
   let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -16,6 +16,10 @@ function App() {
   function testFunction(message) {
     console.log("This function is inside App.js Component");
     console.log(message);
+  }
+
+  function MyFunc(event) {
+    console.log(event.target.value)
   }
 
   return (
@@ -33,11 +37,8 @@ function App() {
         > 
        <Mywork/>
         </Test> */}
-
-        <Product
-          name="Amazon echo"
-          description="Your AI assistant"
-          Price={59.99}
+        <Mytask 
+        NewFunc = {MyFunc}
         />
       </div>
     </>
