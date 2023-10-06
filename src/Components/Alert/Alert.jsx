@@ -1,7 +1,14 @@
 import React from "react";
 import "./Alert.css";
 
-export default function Alert({ dataArray, dataObject, message = "Default Message", testFun, children }) {
+export default function Alert({
+  dataArray,
+  dataObject,
+  message = "Default Message",
+  testFun,
+  children,
+  myfunction,
+}) {
   // console.log(props);
 
   // let dataArray = props.dataArray;
@@ -18,8 +25,13 @@ export default function Alert({ dataArray, dataObject, message = "Default Messag
   return (
     <div className="alert">
       <h1>{message}</h1>
-      <input onChange={(event) => testFun(event)}/>
+      <input onChange={(event) => testFun(event)} />
       <button onClick={() => alert("btn clicked!")}>Click Me</button>
+      <br></br>
+      <input
+        placeholder="Childtoparent"
+        onChange={(event) => myfunction(event)}
+      />
       {children}
     </div>
   );

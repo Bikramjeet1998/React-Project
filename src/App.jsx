@@ -16,9 +16,13 @@ function App() {
 
   function testFunction(event) {
     console.log("This function is inside App.js Component");
-    console.log(event.target.value)
+    console.log(event.target.value);
   }
 
+  function childToParent(event) {
+    console.log("This function is CHilsto parwent function");
+    console.log(event.target.value);
+  }
   return (
     <>
       <div>
@@ -27,6 +31,7 @@ function App() {
           dataArray={[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]}
           dataObject={testObj}
           testFun={testFunction}
+          myfunction={childToParent}
         >
           <Test />
         </Alert>
