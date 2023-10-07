@@ -1,3 +1,36 @@
-p{
-  color: blue;
+.product-card{
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 2px 1px 5px rgb(216, 216, 216);
+}
+
+.product-section{
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.product-title{
+  font-size: 16px;
+  margin: 0;
+}
+.product-brand{
+  font-size: 15px;
+  color: gray;
+  margin: 0;
+}
+.product-price{
+  font-size: 14px;
+  color: dodgerblue;
+  margin: 0;
+}
+
+.product-gallery{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  overflow: auto;
 }

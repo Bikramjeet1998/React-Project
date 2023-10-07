@@ -1,8 +1,10 @@
 import {useState} from 'react'
+import PRODUCTS from "./../../../data/products.json"
+import Products from './Products';
 
 export default function UseState() {
     console.log('useState -- child component')
-    
+    // console.log({PRODUCTS})
     const [counter, setCounter] = useState(0);
     const [name, setName] = useState("Jaskaran");
     const [product, setProduct] = useState({
@@ -19,8 +21,7 @@ export default function UseState() {
       <h4>Name is : {name}</h4>
       <input onChange={(event) => setName(event.target.value)} />
 
-      <h4>Product </h4>
-
+       <h4>Product </h4>
         <input type="text" placeholder='change product name' onChange={(event) => setProduct({
             ...product,
             name : event.target.value
@@ -34,7 +35,6 @@ export default function UseState() {
             ...product,
             type : event.target.value
         })} />
-
 
         <table>
             <tr>
@@ -50,6 +50,8 @@ export default function UseState() {
                 <td>{product.type}</td>
             </tr>
         </table>
+
+        <Products data={PRODUCTS} />
 
     </div>
   )
