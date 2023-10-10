@@ -3,6 +3,7 @@
   border: 1px solid gray;
   border-radius: 5px;
   margin: 20px;
+  width: 40%;
   box-shadow: 2px 1px 5px rgb(216, 216, 216);
 }
 
@@ -33,4 +34,15 @@
   margin-bottom: 10px;
   margin-top: 10px;
   overflow: auto;
+}
+.products-wrapper{
+  /* display: flex; */
+}
+
+.bg-gray{
+  background-color: antiquewhite
+}
+
+.text-red{
+  color: red;
 }

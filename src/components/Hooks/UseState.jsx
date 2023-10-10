@@ -26,6 +26,7 @@ export default function UseState() {
             ...product,
             name : event.target.value
         })} />
+        
         <input type='text' placeholder='change price' onChange={(event) => setProduct({
             ...product,
             price : event.target.value
